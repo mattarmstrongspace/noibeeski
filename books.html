@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>noibw books</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"/>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <!-- Navbar outside content -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light rounded">
+    <a href="/index.html" class="navbar-brand p-0 me-3">
+      <img src="/content/sunflower.png" alt="Logo" height="40">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto px-4">
+        <li class="nav-item"><a class="nav-link" href="/books.html">Books</a></li>
+        <!-- <li class="nav-item"><a class="nav-link" href="/stickers.html">Stickers</a></li> -->
+        <li class="nav-item"><a class="nav-link" href="/shirts.html">Shirts</a></li>
+        <!-- <li class="nav-item"><a class="nav-link" href="/faq.html">FAQ</a></li> -->
+        <li class="nav-item"><a class="nav-link" href="/about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="/contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Content container with all page-specific content -->
+  <div id="content">
+    <div class="container pt-3 pb-2 text-center frosted-glass-2 header">
+      <div class="row pt-lg-3">
+        <div class="col-lg-10 col-md-8 mx-auto">
+          <h1 class="fw-light text-decoration-underline">Perpetual Journal</h1>
+          <p class="lead text-muted pt-2 text-justify">
+            I love buying diaries and planners but after a month of use I forget about them until a year later when the date is all out, 
+            that's why I designed these without days, dates or years so you can use them as often or as little as you like. 
+            They have 12 month sections so it can take you through a full year (starting at any time in the year).           
+          </p>
+          <p class="lead text-muted text-justify">
+            To quiet the working and artistic mind it is important to mix up your difficult and hectic life plannings with some gentle colouring in, 
+            Or use the phrase or question to give you something to think about and maybe scribble down some thoughts of your own.         
+          </p>
+          <p class="lead text-muted fw-bold">
+            Aud $50 (20% off for the first print limited edition - only 8 books!) + shipping.        
+          </p>
+            <a href="/contact.html" class="btn btn-theme btn-theme-glass">Contact</a>
+          </p>
+        </div>
+      </div>
+    </div>
+
+  <div class="container py-5 mt-n4">
+    <div id="bookCarousel" class="carousel slide mx-auto" data-bs-ride="carousel" style="max-width: 900px;">
+    <div class="carousel-inner frosted-glass p-2">
+
+      <!-- Slide 1 -->
+      <div class="carousel-item active text-center">
+        <div class="carousel-image mb-4 rounded">
+          <img src="/content//books/book01.jpg" alt="Book 1">
+        </div>
+        <p class="text-muted">
+          A calming, handcrafted journal designed to help organize your thoughts.
+        </p>
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="carousel-item text-center">
+        <div class="carousel-image mb-4 rounded">
+          <img src="/content/books/book02.jpg" alt="Book 2">
+        </div>
+        <p class="text-muted">
+          Monthly planner with weekdays written and the rest to be filled in.
+        </p>
+      </div>
+
+      <!-- Slide 3 -->
+      <div class="carousel-item text-center">
+        <div class="carousel-image mb-4 rounded">
+          <img src="/content/books/book03.jpg" alt="Book 3">
+        </div>
+        <p class="text-muted">
+          Space to write, draw, make lists etc 
+        </p>
+      </div>
+
+      <!-- Slide 4 -->
+      <div class="carousel-item text-center">
+        <div class="carousel-image mb-4 rounded">
+          <img src="/content/books/book04.jpg" alt="Book 3">
+        </div>
+        <p class="text-muted">
+        Colouring page and thought provoking writing page.
+        </p>
+      </div>
+    </div>
+
+
+      
+    <!-- Controls -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#bookCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </button>
+
+    <button class="carousel-control-next" type="button" data-bs-target="#bookCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </button>
+  </div>
+</div>
+
+  <div class="row py-6 m-5">
+  </div>
+
+  <!-- Footer outside content -->
+  <footer class="footer">
+    <div class="container-fluid d-flex justify-content-end align-items-center h-100 px-4">
+      <span class="me-2">&copy; noibeeski</span>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous">
+  </script>
+
+  <!-- Smooth content fade navigation -->
+  <script>
+    const content = document.getElementById('content');
+    content.style.transition = 'opacity 0.5s ease';
+    content.style.opacity = 1;
+
+    function loadPage(url) {
+      content.style.opacity = 0;
+
+      setTimeout(() => {
+        fetch(url)
+          .then((res) => res.text())
+          .then((html) => {
+            const parser = new DOMParser();
+            const doc = parser.parseFromString(html, 'text/html');
+            const newContent = doc.getElementById('content');
+
+            if (newContent) {
+              content.innerHTML = newContent.innerHTML;
+
+              // ✅ Properly update body classes
+              document.body.className = '';
+              if (doc.body.className) {
+                document.body.classList.add(...doc.body.className.split(' '));
+              }
+
+              history.pushState(null, '', url);
+              content.style.opacity = 1;
+              attachLinkHandlers();
+            } else {
+              window.location.href = url;
+            }
+          })
+          .catch(() => window.location.href = url);
+      }, 500);
+    }
+
+    function attachLinkHandlers() {
+      document.querySelectorAll('a[href^="/"]').forEach((link) => {
+        link.removeEventListener('click', navClickHandler);
+        link.addEventListener('click', navClickHandler);
+      });
+    }
+
+    function navClickHandler(e) {
+      e.preventDefault();
+      loadPage(this.getAttribute('href'));
+    }
+
+    window.addEventListener('popstate', () => {
+      loadPage(window.location.pathname);
+    });
+
+    document.addEventListener('DOMContentLoaded', attachLinkHandlers);
+  </script>
+
+</body>
+</html>

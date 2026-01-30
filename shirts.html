@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>noibw shirts</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"/>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <!-- Navbar outside content -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light rounded">
+    <a href="/index.html" class="navbar-brand p-0 me-3">
+      <img src="/content/sunflower.png" alt="Logo" height="40">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto px-4">
+        <li class="nav-item"><a class="nav-link" href="/books.html">Books</a></li>
+        <!-- <li class="nav-item"><a class="nav-link" href="/stickers.html">Stickers</a></li> -->
+        <li class="nav-item"><a class="nav-link" href="/shirts.html">Shirts</a></li>
+        <!-- <li class="nav-item"><a class="nav-link" href="/faq.html">FAQ</a></li> -->
+        <li class="nav-item"><a class="nav-link" href="/about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="/contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Content container with all page-specific content -->
+  <div id="content">
+    <!-- Title Section -->
+    <div class="container pt-3 pb-2 text-center frosted-glass-2 header">
+      <div class="row pt-lg-3">
+        <div class="col-lg-10 col-md-8 mx-auto">
+          <h1 class="fw-light text-decoration-underline">Shirts</h1>
+          <p class="lead text-muted pt-2">
+          Each shirt is individually selected and from there the shirt itself decides the feel and form of its pattern and covering. 
+          </p>
+          <p class="lead text-muted">
+          As I draw directly onto the shirt using my fabric pen, the shirt gets to retain its natural softness, ready for everyday and every moment use.
+          </p>
+          <p class="lead text-muted">
+          The designs are all hand drawn and then heat set so that you can wear the shirt as you would any other
+          </p>
+            <a href="/contact.html" class="btn btn-theme btn-theme-glass">Contact</a>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Album Section For Sale -->
+    <div class="container py-3">
+      <h1 class="text-center fw-light pb-3 text-decoration-underline">Currently in stock</h1>
+      <div class="row row-cols-1 row-cols-md-2 g-4">
+
+        <!-- Card 1 -->
+        <div class="col">
+          <div class="card shadow-sm frosted-glass">
+            <img src="content/shirts/current/shirt01/shirt_front01.jpg" class="card-img-top" alt="First shirt" role="button" data-bs-toggle="modal" data-bs-target="#shirt1Modal">
+            <div class="card-body text-center">
+              <h5 class="card-text">Brown Sunflower Shirt</h5>
+              <p class="text-muted">Size XL (fits small to medium)<br>
+                100% cotton</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="col">
+          <div class="card shadow-sm frosted-glass">
+            <img src="content/shirts/current/shirt02/shirt_front01.jpg" class="card-img-top" alt="Second shirt" role="button" data-bs-toggle="modal" data-bs-target="#shirt2Modal">
+            <div class="card-body text-center">
+              <h5 class="card-text">Tie Dye with Flowers (Second Hand)</h5>
+                <p class="text-muted">Size Medium<br>
+                100% cotton</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="shirt1Modal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-xl modal-oversized">
+        <div class="modal-content">
+          <div class="modal-header justify-content-center">
+            <h5 class="modal-title">Brown Sunflower Shirt</h5>
+            <button type="button" class="btn-close position-absolute end-0 me-3" data-bs-dismiss="modal"></button>
+          </div>
+
+
+          <div class="modal-body">
+            <div id="shirt1Carousel" class="carousel slide" data-bs-ride="carousel">
+
+              <!-- Indicators (dots) -->
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#shirt1Carousel" data-bs-slide-to="0" class="active"></button>
+                <button type="button" data-bs-target="#shirt1Carousel" data-bs-slide-to="1"></button>
+              </div>
+
+              <!-- Images -->
+              <div class="carousel-inner rounded">
+                <div class="carousel-item active">
+                  <img src="content/shirts/current/shirt01/shirt_front01.jpg" class="d-block w-100" alt="Second shirt front">
+                </div>
+                <div class="carousel-item">
+                  <img src="content/shirts/current/shirt01/shirt_angle.jpg" class="d-block w-100" alt="Second shirt back">
+                </div>
+              </div>
+
+              <!-- Controls -->
+              <button class="carousel-control-prev" type="button" data-bs-target="#shirt1Carousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#shirt1Carousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+              </button>
+
+            </div>
+          </div>
+
+      <div class="modal-footer">
+        <button class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+    </div>
+
+    <div class="modal fade" id="shirt2Modal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-xl modal-oversized">
+        <div class="modal-content">
+          <div class="modal-header justify-content-center">
+            <h5 class="modal-title">Tie Dye with Flowers</h5>
+            <button type="button" class="btn-close position-absolute end-0 me-3" data-bs-dismiss="modal"></button>
+          </div>
+
+          <div class="modal-body">
+            <div id="shirt2Carousel" class="carousel slide" data-bs-ride="carousel">
+
+              <!-- Indicators (dots) -->
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#shirt2Carousel" data-bs-slide-to="0" class="active"></button>
+                <button type="button" data-bs-target="#shirt2Carousel" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#shirt2Carousel" data-bs-slide-to="2"></button>
+              </div>
+
+              <!-- Images -->
+              <div class="carousel-inner rounded">
+                <div class="carousel-item active">
+                  <img src="content/shirts/current/shirt02/shirt_front01.jpg" class="d-block w-100" alt="Second shirt front">
+                </div>
+                <div class="carousel-item">
+                  <img src="content/shirts/current/shirt02/shirt_front02.jpg" class="d-block w-100" alt="Second shirt front2">
+                </div>
+                <div class="carousel-item">
+                  <img src="content/shirts/current/shirt02/shirt_back01.jpg" class="d-block w-100" alt="Second shirt back">
+                </div>
+              </div>
+
+              <!-- Controls -->
+              <button class="carousel-control-prev" type="button" data-bs-target="#shirt2Carousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#shirt2Carousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+              </button>
+
+            </div>
+          </div>
+
+          <div class="modal-footer">
+            <button class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Album Section - Legacy -->
+    <div class="container py-5">
+      <h1 class="container text-center fw-light pb-2 text-decoration-underline">Previous Items</h1>
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4 pb-5">
+        <!-- Card 1 -->
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="content/shirts/legacy/shirt02.jpg" class="card-img-top-shirt">
+          </div>
+        </div>
+
+
+        <!-- Card 2 -->
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="content/shirts/legacy/shirt03.jpg" class="card-img-top-shirt">
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="content/shirts/legacy/shirt06.jpg" class="card-img-top-shirt">
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="content/shirts/legacy/shirt07.jpg" class="card-img-top-shirt">
+          </div>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="content/shirts/legacy/shirt09.jpg" class="card-img-top-shirt">
+          </div>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="content/shirts/legacy/shirt10.jpg" class="card-img-top-shirt">
+          </div>
+        </div>
+
+        <!-- Card 7 -->
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="content/shirts/legacy/shirt11.jpg" class="card-img-top-shirt">
+          </div>
+        </div>
+
+        <!-- Card 8 -->
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="content/shirts/legacy/shirt12.jpg" class="card-img-top-shirt">
+          </div>
+        </div>
+
+        <!-- Card 9 -->
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="content/shirts/legacy/shirt13.jpg" class="card-img-top-shirt">
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+  <!-- Footer outside content -->
+  <footer class="footer">
+    <div
+      class="container-fluid d-flex justify-content-end align-items-center h-100 px-4"
+    >
+      <span class="me-2">&copy; noibeeski</span>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous">
+  </script>
+
+  <!-- Smooth content fade navigation -->
+  <script>
+  const content = document.getElementById('content');
+
+  content.style.transition = 'opacity 0.5s ease';
+  content.style.opacity = 1;
+
+  function loadPage(url) {
+    content.style.opacity = 0;
+
+    setTimeout(() => {
+      fetch(url)
+        .then((response) => response.text())
+        .then((html) => {
+          const parser = new DOMParser();
+          const doc = parser.parseFromString(html, 'text/html');
+          const newContent = doc.getElementById('content');
+
+          if (newContent) {
+            content.innerHTML = newContent.innerHTML;
+
+            // Update body class to match the new page's body class
+            document.body.className = doc.body.className;
+
+            history.pushState(null, '', url);
+            content.style.opacity = 1;
+
+            attachLinkHandlers();
+          } else {
+            window.location.href = url;
+          }
+        })
+        .catch(() => {
+          window.location.href = url;
+        });
+    }, 500);
+  }
+
+  function attachLinkHandlers() {
+    document.querySelectorAll('a[href^="/"]').forEach((link) => {
+      link.removeEventListener('click', navClickHandler);
+      link.addEventListener('click', navClickHandler);
+    });
+  }
+
+  function navClickHandler(e) {
+    e.preventDefault();
+    const href = this.getAttribute('href');
+    loadPage(href);
+  }
+
+  window.addEventListener('popstate', () => {
+    loadPage(window.location.pathname);
+  });
+
+  document.addEventListener('DOMContentLoaded', () => {
+    attachLinkHandlers();
+  });
+</script>
+
+</body>
+</html>
+
