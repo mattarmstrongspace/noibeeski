@@ -31,7 +31,24 @@
 
   <!-- Main content container -->
   <div id="content">
-    <!-- PAGE-SPECIFIC CONTENT HERE -->
+    <div class="container d-flex justify-content-center align-items-center py-5">
+      <div class="frosted-glass text-center p-5" style="max-width: 600px;">
+        <h1 class="mb-3">Thank you!</h1>
+
+        <p class="text-muted mb-4">
+          Your message has been sent successfully.
+          <br />
+          I’ll get back to you as soon as I can.
+        </p>
+
+        <div class="d-flex justify-content-center gap-3">
+          <a href="/index.html" class="btn btn-theme btn-theme-glass">
+            Back home
+          </a>
+        </div>
+      </div>
+    </div>
+
   </div>
 
   <!-- Footer -->
@@ -48,64 +65,5 @@
     crossorigin="anonymous"
   ></script>
 
-  <!-- Smooth content fade navigation -->
-  <script>
-  const content = document.getElementById('content');
-
-  content.style.transition = 'opacity 0.5s ease';
-  content.style.opacity = 1;
-
-  function loadPage(url) {
-    content.style.opacity = 0;
-
-    setTimeout(() => {
-      fetch(url)
-        .then(response => response.text())
-        .then(html => {
-          const parser = new DOMParser();
-          const doc = parser.parseFromString(html, 'text/html');
-          const newContent = doc.getElementById('content');
-
-          if (newContent) {
-            content.innerHTML = newContent.innerHTML;
-
-            // Update body class to match new page's body class
-            document.body.className = doc.body.className;
-
-            history.pushState(null, '', url);
-            content.style.opacity = 1;
-
-            attachLinkHandlers();
-          } else {
-            window.location.href = url;
-          }
-        })
-        .catch(() => {
-          window.location.href = url;
-        });
-    }, 500);
-  }
-
-  function attachLinkHandlers() {
-    document.querySelectorAll('a[href^="/"]').forEach(link => {
-      link.removeEventListener('click', navClickHandler);
-      link.addEventListener('click', navClickHandler);
-    });
-  }
-
-  function navClickHandler(e) {
-    e.preventDefault();
-    const href = this.getAttribute('href');
-    loadPage(href);
-  }
-
-  window.addEventListener('popstate', () => {
-    loadPage(window.location.pathname);
-  });
-
-  document.addEventListener('DOMContentLoaded', () => {
-    attachLinkHandlers();
-  });
-  </script>
 </body>
 </html>

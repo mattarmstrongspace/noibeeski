@@ -76,7 +76,7 @@
         <!-- Hidden Formspree fields -->
         <input type="hidden" name="_subject" value="New commission enquiry">
         <input type="hidden" name="_gotcha" style="display:none">
-        <input type="hidden" name="_next" value="127.0.0.1:5500/submit.html">
+        <input type="hidden" name="_next" value="https://noibeeski.art/submit.html">
 
         <div class="col-12 text-center pt-4">
           <button type="submit" class="btn btn-theme btn-theme-glass">Submit</button>
@@ -107,6 +107,13 @@
 
   content.style.transition = 'opacity 0.5s ease';
   content.style.opacity = 1;
+
+  // 🔒 Flag to prevent SPA nav during form submission
+  let isSubmittingForm = false;
+
+  document.addEventListener('submit', () => {
+    isSubmittingForm = true;
+  });
 
   function loadPage(url) {
     content.style.opacity = 0;
@@ -147,12 +154,17 @@
   }
 
   function navClickHandler(e) {
-    const href = this.getAttribute('href');
-    if (href === '/contact.html') return;
+  const href = this.getAttribute('href');
 
-    e.preventDefault();
-    loadPage(href);
-  }
+  if (href === '/contact.html') return;
+
+  if (isSubmittingForm) return;
+
+  e.preventDefault();
+  loadPage(href);
+}
+
+
 
   window.addEventListener('popstate', () => {
     loadPage(window.location.pathname);
