@@ -480,9 +480,32 @@ body::before {
   }
 }
 
-.carousel-item img {
-  object-fit: cover;
-  max-height: 800px;
+/* -------------------------------------------
+   Shirt Carousels
+--------------------------------------------- */
+
+/* Lock consistent height */
+.shirt-block .carousel {
+  height: 850px;
 }
 
+/* Slightly smaller on phones */
+@media (max-width: 767px) {
+  .shirt-block .carousel {
+    height: 380px;
+  }
+}
+
+/* Force slides to obey height */
+.shirt-block .carousel-inner,
+.shirt-block .carousel-item {
+  height: 100%;
+}
+
+/* Make images fit properly */
+.shirt-block .carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;   /* prevents cropping + resizing jumps */
+}
 
